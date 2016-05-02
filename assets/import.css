@@ -1,0 +1,29 @@
+@import url('../node_modules/metro-ui/build/css/metro.css');
+
+
+/* override the root element to enable scrolling */
+.pane-css {
+    height: 100%;
+    max-height: 100% !important;
+    width: 100%;
+    position:relative;
+    overflow:hidden;
+    clear:both;
+    background-color: transparent;
+}
+
+/* our additional wrapper element for the items */
+.pane-css .items {
+    width:3000em;
+    position:absolute;
+    clear:both;
+}
+
+.tile-area{
+    min-height: 100%;
+    padding: 120px 0 0 0;
+}
+
+
+
+

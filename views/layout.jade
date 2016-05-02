@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/import.css')
+        script(src='/javascripts/all.js')
+        script(src = "http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js")
+
+    body(style="overflow-y: hidden;")
+        include navbar/navbar
+        .tile-area.fg-white.tile-area-scheme-dark(style="height: 100%; max-height: 100% !important;")
+            .pane-css
+                .items(style="left:0px;")
+                    .tile-group.quadro
+                        .tile-group-title
+                            | Beer
+                        hr(class='bg-green')
+                        include slide/slide
+                    .tile-group.quadro
+                        .tile-group-title
+                            | Liquor
+                        hr(class='bg-red')
+                        include slide/slide
+                    .tile-group.quadro
+                        .tile-group-title
+                            | Wine
+                        hr(class='bg-blue')
+                        include slide/slide
+        script(type='text/javascript').
+            $(function () {
+                $('.pane-css').scrollable({circular: true, mousewheel: true, speed: 18888800, easing: 'swing'});
+            });
